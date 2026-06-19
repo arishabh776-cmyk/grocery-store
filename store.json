@@ -1,0 +1,104 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "name": "Store Admin",
+      "email": "admin@grocer.local",
+      "passwordHash": "devsalt0123456789:c6a8a010dec6db6577888bd2b6b691ce13af8d52862eca78a0bce1945f6fd975",
+      "role": "admin",
+      "createdAt": "2026-06-20T00:00:00.000Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "p-berries",
+      "name": "Organic Berry Basket",
+      "category": "Fruits",
+      "price": 349,
+      "unit": "500 g",
+      "stock": 42,
+      "rating": 4.8,
+      "tags": ["organic", "fresh", "antioxidant"],
+      "image": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "p-avocado",
+      "name": "Hass Avocados",
+      "category": "Fruits",
+      "price": 229,
+      "unit": "pack of 2",
+      "stock": 35,
+      "rating": 4.7,
+      "tags": ["keto", "creamy", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "p-broccoli",
+      "name": "Hydroponic Broccoli",
+      "category": "Vegetables",
+      "price": 119,
+      "unit": "1 head",
+      "stock": 56,
+      "rating": 4.6,
+      "tags": ["green", "fiber", "farm"],
+      "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "p-milk",
+      "name": "A2 Farm Milk",
+      "category": "Dairy",
+      "price": 88,
+      "unit": "1 L",
+      "stock": 80,
+      "rating": 4.9,
+      "tags": ["daily", "protein", "chilled"],
+      "image": "https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "p-bread",
+      "name": "Sourdough Country Loaf",
+      "category": "Bakery",
+      "price": 189,
+      "unit": "450 g",
+      "stock": 24,
+      "rating": 4.7,
+      "tags": ["artisan", "breakfast", "fresh-baked"],
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "p-eggs",
+      "name": "Free Range Eggs",
+      "category": "Dairy",
+      "price": 165,
+      "unit": "12 pcs",
+      "stock": 38,
+      "rating": 4.8,
+      "tags": ["protein", "breakfast", "free-range"],
+      "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "p-almonds",
+      "name": "California Almonds",
+      "category": "Pantry",
+      "price": 499,
+      "unit": "500 g",
+      "stock": 30,
+      "rating": 4.9,
+      "tags": ["snack", "protein", "premium"],
+      "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "p-juice",
+      "name": "Cold Pressed Citrus",
+      "category": "Beverages",
+      "price": 145,
+      "unit": "300 ml",
+      "stock": 45,
+      "rating": 4.5,
+      "tags": ["vitamin-c", "chilled", "no-sugar"],
+      "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=900&q=80"
+    }
+  ],
+  "carts": {},
+  "orders": []
+}

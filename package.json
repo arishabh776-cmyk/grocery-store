@@ -1,0 +1,18 @@
+{
+  "name": "auto-grocery-store",
+  "version": "1.0.0",
+  "description": "A fully automatic grocery store website with a Node backend and glassmorphism frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node server.js --seed-only"
+  },
+  "keywords": [
+    "grocery",
+    "node",
+    "glassmorphism",
+    "store"
+  ],
+  "author": "",
+  "license": "MIT"
+}

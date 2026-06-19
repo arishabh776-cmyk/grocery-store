@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlasMart Automatic Grocery</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <header class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark">G</span>
+        <span>GlasMart</span>
+      </a>
+      <nav class="nav-actions">
+        <button class="icon-btn" id="ordersBtn" title="Orders">Orders</button>
+        <button class="icon-btn" id="adminBtn" title="Admin">Admin</button>
+        <button class="cart-pill" id="cartBtn">Cart <span id="cartCount">0</span></button>
+        <button class="auth-btn" id="authBtn">Sign in</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Automatic checkout, fresh every hour</p>
+          <h1>Grocery runs that finish themselves.</h1>
+          <p class="hero-text">Shop curated produce, pantry staples, dairy, bakery, and drinks with instant cart sync, stock-aware checkout, and auto-confirmed delivery.</p>
+          <div class="hero-actions">
+            <a href="#shop" class="primary-link">Start shopping</a>
+            <span class="delivery-chip">28 min express delivery</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="control-band" id="shop">
+        <div class="search-glass">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="search" placeholder="berries, milk, breakfast..." />
+        </div>
+        <div class="select-row">
+          <select id="categorySelect" aria-label="Category"></select>
+          <select id="sortSelect" aria-label="Sort">
+            <option value="featured">Featured</option>
+            <option value="rating">Top rated</option>
+            <option value="price-asc">Price low to high</option>
+            <option value="price-desc">Price high to low</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="store-grid" id="productGrid"></section>
+    </main>
+
+    <aside class="drawer" id="cartDrawer" aria-hidden="true">
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <div>
+            <p class="eyebrow">Auto basket</p>
+            <h2>Your cart</h2>
+          </div>
+          <button class="close-btn" data-close="cartDrawer" title="Close">x</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="checkout-card">
+          <div class="totals" id="totals"></div>
+          <textarea id="addressInput" rows="3" placeholder="Delivery address"></textarea>
+          <button class="wide-btn" id="checkoutBtn">Auto checkout</button>
+        </div>
+      </div>
+    </aside>
+
+    <dialog id="authDialog">
+      <form method="dialog" class="dialog-card" id="authForm">
+        <button class="close-btn dialog-close" value="cancel" title="Close">x</button>
+        <p class="eyebrow">Member access</p>
+        <h2 id="authTitle">Sign in</h2>
+        <input id="nameInput" placeholder="Name" class="hidden" />
+        <input id="emailInput" type="email" placeholder="Email" required />
+        <input id="passwordInput" type="password" placeholder="Password" required />
+        <button class="wide-btn" type="submit">Continue</button>
+        <button class="ghost-btn" type="button" id="toggleAuth">Create a new account</button>
+        <p class="hint">Admin demo: admin@grocer.local / admin123</p>
+      </form>
+    </dialog>
+
+    <dialog id="ordersDialog">
+      <div class="dialog-card large-dialog">
+        <button class="close-btn dialog-close" data-dialog-close="ordersDialog" title="Close">x</button>
+        <p class="eyebrow">Live history</p>
+        <h2>Orders</h2>
+        <div id="ordersList" class="orders-list"></div>
+      </div>
+    </dialog>
+
+    <dialog id="adminDialog" class="manager-dialog">
+      <div class="dialog-card large-dialog">
+        <button class="close-btn dialog-close" data-dialog-close="adminDialog" title="Close">x</button>
+        <p class="eyebrow">Manager cockpit</p>
+        <h2>Admin dashboard</h2>
+        <div class="manager-stats" id="adminStats"></div>
+        <div class="manager-section">
+          <div class="section-title">
+            <h3>Received orders</h3>
+            <span id="adminOrderCount" class="hint"></span>
+          </div>
+          <div id="adminOrders" class="manager-orders"></div>
+        </div>
+        <div class="manager-section">
+          <div class="section-title">
+            <h3>Inventory manager</h3>
+            <span class="hint">Update stock or add new products</span>
+          </div>
+        </div>
+        <form id="productForm" class="admin-form">
+          <input name="name" placeholder="Product name" required />
+          <input name="category" placeholder="Category" required />
+          <input name="price" type="number" placeholder="Price" required />
+          <input name="unit" placeholder="Unit" required />
+          <input name="stock" type="number" placeholder="Stock" required />
+          <input name="image" placeholder="Image URL" />
+          <button class="wide-btn" type="submit">Add product</button>
+        </form>
+        <div id="adminProducts" class="admin-list"></div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
